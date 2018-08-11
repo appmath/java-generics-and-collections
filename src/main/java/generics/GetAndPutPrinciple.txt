@@ -1,0 +1,15 @@
+The Get and Put Principle:
+1) GET: restricts the type with EXTENDS  (UP TO THIS TYPE)
+    Use an extends wildcard when you only get values out of a structure: (List<? extends T> src)
+    Think of gEt == ExtEnds
+
+2) PUT: opens up the type with SUPER  (STARTING WITH THIS TYPE)
+    Use a super wildcard when you only put values into a structure: (List< ? super T> dst)
+    Think of pUt == sUper
+
+3) Don’t use a wildcard when you both get and put.
+
+public static <T> void copy(List<? super T> dst, List<? extends T> src) {
+        for (T t : src) {
+            dst.add(t);
+        }
