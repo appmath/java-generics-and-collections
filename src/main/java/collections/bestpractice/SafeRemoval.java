@@ -10,11 +10,6 @@ import java.util.Collections;
 import java.util.Iterator;
 
 
-/**
- * Description
- *
- *
- */
 public class SafeRemoval {
 		public static void main(String[] args) {
 				try {
